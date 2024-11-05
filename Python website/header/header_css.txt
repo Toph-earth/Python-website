@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+}
+.header-button-left{
+    margin-right: 15px; /* Space between buttons */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    padding: 10px; /* Padding for buttons */
+    border-radius: 10px; /* Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth background change */
+    font-size: large;
+    width: 100px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #005bb5;
+}
+
+.header-button-left:hover {
+    background-color: #0080ff; 
+}
+
+.logo{
+    font-family: "Anta", sans-serif;
+    text-decoration: none;
+    font-size: xx-large;
+    padding : 10px;
+    padding-right:15px;
+    color: White;
+}
+
+.search-bar {
+    margin-left: auto; /* Push the search bar to the right */
+    padding: 10px; /* Padding for search bar */
+    border-radius: 10px; /* Rounded corners */
+    width: 200px; 
+}
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Padding for header */
+    background-color: #002147; /* Background color for header */
+    color: white; /* Text color */
+  
+}

@@ -1,0 +1,8 @@
+<header>
+        <div class="header">
+            <a href="/index.html" class="logo">Pythonus</a>
+            <a href="/Prepare/topicsPrepare.html" class="header-button-left"><b>Prepare</b></a>
+            <a href="/Practice/topicsPractice.html" class="header-button-left"><b>Practice</b></a>
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
+</header>

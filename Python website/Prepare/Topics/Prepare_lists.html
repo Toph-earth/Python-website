@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List-Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <style>
+        body{
+                margin: 0px;
+                min-width:600px;
+                background-color: #121212;
+                color: #E0E0E0;
+                font-family: Arial, sans-serif;
+            }
+            .header-button-left{
+                margin-right: 15px; /* Space between buttons */
+                text-decoration: none; /* Remove underline from links */
+                color: white; /* Text color */
+                padding: 10px; /* Padding for buttons */
+                border-radius: 10px; /* Rounded corners for buttons */
+                transition: background-color 0.3s; /* Smooth background change */
+                font-size: large;
+                width: 100px;
+                text-align: center;
+                font-family: 'Arial', sans-serif;
+                background-color: #005bb5;
+            }
+
+            .header-button-left:hover {
+                background-color: #0080ff; 
+            }
+
+            .logo{
+                font-family: "Anta", sans-serif;
+                text-decoration: none;
+                font-size: xx-large;
+                padding : 10px;
+                padding-right:15px;
+                color: White;
+            }
+
+            .search-bar {
+                margin-left: auto; /* Push the search bar to the right */
+                padding: 10px; /* Padding for search bar */
+                border-radius: 10px; /* Rounded corners */
+                width: 200px; 
+            }
+
+            .header {
+                display: flex; /* Use flexbox for layout */
+                justify-content: space-between; /* Space elements evenly */
+                align-items: center; /* Center items vertically */
+                padding: 20px; /* Padding for header */
+                background-color: #002147; /* Background color for header */
+                color: white; /* Text color */
+            
+            }
+            .slogan-text {
+                text-align: center;
+                margin: 20px 0; /* Margin for spacing */
+                font-family: "Anta", sans-serif;
+            }
+            
+        h1 {
+            text-align: center;
+            color: #00bfff;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1E1E1E;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2A2A2A;
+        }
+
+        a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .program-section {
+            text-align: left;
+            margin: 80px 0; /* Large gap between sections */
+            padding: 20px;
+            border: 1px solid #333;
+            background-color: #1E1E1E;
+        }
+
+        .go-to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 10px;
+            background-color: #005bb5;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            width: 120px;
+            font-size: large;
+            font-family: "Anta", sans-serif;
+        }
+
+        .go-to-top:hover {
+            background-color: #0080ff;
+        }
+        
+        .code-box{
+            background-color: #121212 ;
+            padding-top:10px;
+            padding-left:20px;
+            border-radius: 8px;
+            padding-bottom: 5px;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="/index.html" class="logo" style="text-decoration: none;">Pythonus</a>
+            <a href="/Prepare/topicsPrepare.html" class="header-button-left" style="text-decoration: none;"><b>Prepare</b></a>
+            <a href="/Practice/topicsPractice.html" class="header-button-left" style="text-decoration: none;"><b>Practice</b></a>
+            <input type="text" onkeyup = "Searching()" placeholder="Search for topic" class="search-bar">
+        </div>
+</header>
+
+<main>
+    <h1>Topic Lists</h1>
+        <table id = 'Table1'>
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Sub-Topic</th>
+                    <th>Reference Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class = "item_header">Creating a List</td>
+                    <td><a href="#create-list" class = "item_link">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class = "item_header">Accesing List Elements</td>
+                    <td><a href="#accesing-list-elements" class = "item_link">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class = "item_header">Modifying List</td>
+                    <td><a href="#modifying-list" class = "item_link">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class = "item_header">List Methods</td>
+                    <td><a href="#list-methods" class = "item_link">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>List Comprehension</td>
+                    <td><a href="#list-comprehension">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>List Slicing</td>
+                    <td><a href="#list-slicing">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Iterating Through a List</td>
+                    <td><a href="#iterating-through-a-list">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Nested Lists</td>
+                    <td><a href="#nested-lists">View Program</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Common List Operations</td>
+                    <td><a href="#common-list-operations">View Program</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="program-section" id="create-list">
+            <h2>Creating a List</h2>
+            <p>
+                A list is defined using square brackets [], and elements are separated by commas.
+            </p>
+
+            <div class="code-box">
+                <button  class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+# Example: Creating a list of integers
+numbers = [1, 2, 3, 4, 5]
+
+# Example: Creating a list of mixed data types
+mixed_list = [1, "Hello", 3.14, True]
+
+                </pre>
+            </div>
+
+        </div>
+        
+        <div class="program-section" id="accesing-list-elements">
+            <h2>Accesing List Elements</h2>
+            <p>
+                List elements are accessed using zero-based indexing. You can use positive indices to access elements from the start or negative indices to access elements from the end.
+            </p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+# Example: Accessing elements
+numbers = [10, 20, 30, 40]
+
+# Access the first element
+print(numbers[0])  # Output: 10
+
+# Access the last element
+print(numbers[-1])  # Output: 40
+                </pre>
+            </div>
+        </div>
+        
+        <div class="program-section" id="modifying-list">
+            <h2>Modifying List</h2>
+            <p>
+                Lists are mutable, meaning their elements can be changed or updated after creation.
+            </p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+# Example: Modifying a list
+numbers = [10, 20, 30]
+numbers[1] = 25  # Change the second element
+print(numbers)  # Output: [10, 25, 30]
+                </pre>
+            </div>
+        </div>
+        
+        <div class="program-section" id="list-methods">
+            <h2>List Methods</h2>
+            <p>
+                Python provides several built-in methods to manipulate lists:
+            </p>
+
+            <p>1. append(): Adds an item to the end of the list.</p>
+            <div class="code-box">
+                <button class ="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)  # Output: [1, 2, 3, 4]                    
+                </pre>
+            </div>
+
+            <p>2. insert(): Inserts an item at a specified index.</p>
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers.insert(1, 10)
+print(numbers)  # Output: [1, 10, 2, 3, 4]                    
+                </pre>
+            </div>
+
+            <p>3. remove(): Removes the first occurrence of an item.</p>
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers.remove(10)
+print(numbers)  # Output: [1, 2, 3, 4]
+                </pre>
+            </div>
+
+            <p>4. pop(): Removes and returns the item at a specified index. If no index is provided, it removes the last item.</p>
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers.pop()
+print(numbers)  # Output: [1, 2, 3]  
+                </pre>
+            </div>
+
+            <p>5. sort(): Sorts the list in ascending order (can also sort in descending order).</p>
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers.sort()
+print(numbers)  # Output: [1, 2, 3]
+
+# Sorting in descending order
+numbers.sort(reverse=True)
+print(numbers)  # Output: [3, 2, 1]                    
+                </pre>
+            </div>
+
+            <p>6. reverse(): Reverses the elements of the list.</p>
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers.reverse()
+print(numbers)  # Output: [1, 2, 3]                    
+                </pre>
+            </div>
+
+            <p>7. clear(): Removes all elements from the list.</p>
+            <div class="code-box">
+               <button class = "copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers.clear()
+print(numbers)  # Output: []                    
+                </pre>
+            </div>
+
+        </div>
+        
+        <div class="program-section" id="list-comprehension">
+            <h2>List Comprehension</h2>
+            <p>
+                List comprehension offers a concise way to create lists by applying an expression to each item in an iterable.
+            </p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+# Example: Create a list of squares of numbers
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
+                </pre>
+            </div>
+        </div>
+        
+        <div class="program-section" id="list-slicing">
+            <h2>List Slicing</h2>
+            <p>
+                Slicing allows you to get a sublist from a list by specifying a start and end index.
+            </p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers = [10, 20, 30, 40, 50]
+
+# Get the first three elements
+sublist = numbers[:3]
+print(sublist)  # Output: [10, 20, 30]
+
+# Get the last two elements
+sublist = numbers[-2:]
+print(sublist)  # Output: [40, 50]
+                </pre>
+            </div>
+        </div>
+        
+        <div class="program-section" id="iterating-through-a-list">
+            <h2>Iterating Through a List</h2>
+            <p>
+                You can iterate through lists using loops, which allows you to access each element.
+            </p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+# Example: Iterating with a for loop
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+# Output:
+# apple
+# banana
+# cherry
+                </pre>
+            </div>
+        </div>
+        
+        <div class="program-section" id="nested-lists">
+            <h2>Nested Lists</h2>
+            <p>
+                A list can contain other lists, allowing for the creation of multi-dimensional arrays (e.g., matrices).
+            </p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+# Example: 2D list (Matrix)
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(matrix[0])  # Output: [1, 2, 3]
+print(matrix[0][1])  # Output: 2
+                </pre>
+            </div>
+        </div>
+        
+        <div class="program-section" id="common-list-operations">
+            <h2>Common List Operations</h2>
+
+            <p>1. len(): Returns the number of items in the list.</p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers = [1, 2, 3]
+print(len(numbers))  # Output: 3                    
+                </pre>
+            </div>
+
+            <p>2. in: Checks if an item is in the list.</p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+print(2 in numbers)  # Output: True
+                </pre>
+            </div>
+
+            <p>3. count(): Returns the number of occurrences of an item in the list.</p>
+
+            <div class="code-box">
+                <button class="copy-code-button">Copy Code</button>
+                <pre class = "copy-code-text">
+numbers = [1, 2, 2, 3]
+print(numbers.count(2))  # Output: 2                    
+                </pre>
+            </div>
+        </div>
+
+    <button class="go-to-top" onclick="scrollToTop()">Go to Top</button>
+    </main>
+
+    
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function Searching()
+       {
+            var searchInput, filter, table, tr,  td, topic;
+            searchInput = document.querySelector(".search-bar");
+            filter = searchInput.value.toLowerCase();
+            table = document.getElementById("Table1");
+            tr = document.getElementsByTagName("tr");
+            for(var i =0; i<tr.length; i++){
+            td= tr[i].getElementsByTagName("td")[1];
+            if(td){
+                topic = td.textContent.toLowerCase();
+                if(topic.indexOf(filter)>-1)
+                {
+                    tr[i].style.display="";
+
+                }
+                else{
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    function Copy(preTag){
+        const copyText = preTag.innerText.trim();
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = copyText;
+        document.body.appendChild(tempTextArea);
+
+        tempTextArea.select();
+        tempTextArea.setSelectionRange(0,99999);
+        document.execCommand('copy');
+        document.body.removeChild(tempTextArea);
+        alert(`Text copied: "${copyText}"`);
+
+    }
+    document.querySelectorAll('.copy-code-button').forEach(button =>{
+        button.addEventListener('click',() =>{
+            const preTag = button.nextElementSibling;
+            if(preTag && preTag.classList.contains('copy-code-text')) {
+                Copy(preTag);
+            }
+        });
+    });
+        
+    </script>
+</main>
+    
+</body>
+</html>
